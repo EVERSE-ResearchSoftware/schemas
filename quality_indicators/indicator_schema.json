@@ -1,0 +1,241 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://everse.software/indicator_schema.json",
+    "type": "object",
+    "default": {},
+    "title": "EVERSE indicator schema",
+    "required": [
+        "identifier",
+        "name",
+        "description",
+        "status",
+        "quality-dimension",
+        "release-date",
+        "doi",
+        "authors",
+        "contacts"
+    ],
+    "$defs": {
+        "person": {
+            "type": "object",
+            "default": {},
+            "title": "A person",
+            "required": [
+                "name",
+                "email"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The name of the person",
+                    "examples": [
+                        "Jane Doe"
+                    ]
+                },
+                "orcid": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The orcid of the person",
+                    "examples": [
+                        "https://orcid.org/0000-0000-0000-0000"
+                    ]
+                },
+                "github": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The GitHub username of the person",
+                    "examples": [
+                        "johndoe"
+                    ]
+                },
+                "gitlab": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The GitLab username of the person",
+                    "examples": [
+                        "janedoe"
+                    ]
+                },
+                "email": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The email of the person",
+                    "format": "email",
+                    "examples": [
+                        "someone@somewhere.com"
+                    ]
+                },
+                "affiliation": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The affiliation of the person",
+                    "examples": [
+                        "Some University"
+                    ]
+                },
+                "image-url": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The url of the person's image (avatar)",
+                    "format": "url",
+                    "examples": [
+                        "https://everse.software/image.png"
+                    ]
+                }
+            }
+        },
+        "organization": {
+            "type": "object",
+            "default": {},
+            "title": "An organization",
+            "required": [
+                "name",
+                "url"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The name of the organization",
+                    "examples": [
+                        "maintainer name"
+                    ]
+                },
+                "url": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The url of the organization",
+                    "format": "url",
+                    "examples": [
+                        "https://everse.software"
+                    ]
+                },
+                "image-url": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The url of the organization image",
+                    "format": "url",
+                    "examples": [
+                        "https://everse.software/image.png"
+                    ]
+                }
+            }
+        }
+    },
+    "properties": {
+        "identifier": {
+            "type": "string",
+            "default": "",
+            "title": "The identifier of the indicator",
+            "examples": [
+                "Some-Identifier"
+            ]
+        },
+        "name": {
+            "type": "string",
+            "default": "",
+            "title": "The name of the indicator",
+            "examples": [
+                "indicator name"
+            ]
+        },
+        "description": {
+            "type": "string",
+            "default": "",
+            "title": "The description of the indicator",
+            "examples": [
+                "a short description"
+            ]
+        },
+        "keywords": {
+            "type": "array",
+            "default": [],
+            "title": "The keywords of the indicator",
+            "items": {
+                "type": "string",
+                "title": "A keyword for the indicator",
+                "enum": ["keyword-1", "keyword-2", "keyword-3"],
+                "examples": [
+                    "keyword-1",
+                    "keyword-2"
+                ]
+            }
+        },
+        "status": {
+            "type": "string",
+            "default": "",
+            "title": "The status of the indicator",
+            "enum": ["active", "deprecated"],
+            "examples": ["active"]
+        },
+        "quality-dimension": {
+            "type": "array",
+            "default": [],
+            "title": "The dimension of the indicator",
+            "items": {
+                "type": "string",
+                "title": "The quality dimensions of the indicator",
+                "enum": ["openness",
+                    "FAIRness",
+                    "sustainability"
+                ],
+                "examples": ["openness",
+                    "FAIRness",
+                    "sustainability"
+                ]
+            }
+        },
+        "release-date": {
+            "type": "string",
+            "default": "",
+            "title": "The release-date of the indicator (YYYY-MM-DD",
+            "format": "date",
+            "pattern": "^(20[0-9]{2})-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$",
+            "examples": [
+                "2000-01-01",
+                "2024-12-31"
+            ]
+        },
+        "version": {
+            "type": "string",
+            "default": "",
+            "title": "The version of the indicator",
+            "examples": [
+                "0.0.1",
+                "v0.0.1"
+            ]
+        },
+        "doi": {
+            "type": "string",
+            "default": "",
+            "title": "The doi of the indicator",
+            "pattern": "^10\\.\\d{4,9}(\\.\\d+)?/[-._;()/:a-zA-Z0-9]+$",
+            "examples": [
+                "10.5281/zenodo.0000000"
+            ]
+        },
+        "authors": {
+            "type": "array",
+            "default": {},
+            "title": "The authors of the indicator",
+            "contains": {
+                "oneOf": [
+                    { "$ref": "#/$defs/person" },
+                    { "$ref": "#/$defs/organization" }
+                ]
+            }
+        },
+        "contacts": {
+            "type": "array",
+            "default": [],
+            "title": "Contacts of the indicator",
+            "contains": {
+                "oneOf": [
+                    { "$ref": "#/$defs/person" },
+                    { "$ref": "#/$defs/organization" }
+                ]
+            }
+        }
+    }
+}
