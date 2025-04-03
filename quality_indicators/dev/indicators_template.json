@@ -1,0 +1,43 @@
+{
+    "@context": {
+      "dcterms": "http://purl.org/dc/terms/",
+      "rsqi": "https://w3id.org/everse/rsqi#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "ftr": "https://w3id.org/ftr#",
+      "dqv": "http://www.w3.org/ns/dqv#",
+      "vcard": "http://www.w3.org/2006/vcard/ns#",
+      "contactPoint": { "@id": "dcat:contactPoint", "@type": "@id" },
+      "created": { "@id": "dcterms:created", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
+      "description": { "@id": "dcterms:description", "@type": "http://www.w3.org/2001/XMLSchema#string" },
+      "title": { "@id": "dcterms:title", "@type": "http://www.w3.org/2001/XMLSchema#string" },
+      "status": { "@id": "ftr:status", "@type": "http://www.w3.org/2001/XMLSchema#string" },
+      "keyword": { "@id": "dcat:keyword", "@type": "http://www.w3.org/2001/XMLSchema#string" },
+      "identifier": { "@id": "dcterms:identifier", "@type": "@id" },
+      "qualityDimension": { "@id": "dqv:inDimension", "@type": "@id" },
+      "source": { "@id": "dcterms:source", "@type": "@id" },
+      "version": { "@id": "dcat:version", "@type": "http://www.w3.org/2001/XMLSchema#string" }
+    },
+    "@graph": [
+      {
+        "@id": "https://w3id.org/everse/indicators/Do1",
+        "@type": "rsqi:SoftwareQualityIndicator",
+        "identifier": "https://w3id.org/everse/indicators/Do1",
+        "description": "Software includes clear contribution instructions, software purpose on project website, feedback channels, and version control practices.",
+        "contactPoint": "Daniel Garijo",
+        "title": "Contribution Process and Project Purpose",
+        "keyword": [
+          "contribution guidelines",
+          "feedback channel",
+          "software purpose"
+        ],
+        "qualityDimension": [
+          "https://w3id.org/everse/rsqd#documentation"
+        ],
+        "source": "https://www.bestpractices.dev/en/criteria/0",
+        "status": "Active"
+      }
+    ]
+  }
+  
