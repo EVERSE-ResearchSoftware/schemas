@@ -3,33 +3,36 @@
     "meta": {
         "generated_at": "2025-04-28T15:25:30",
         "generated_by": "fdiblen@github",
-        "resource": { // the software being assessed (software schema will be used to describe resource)
+        "resource": {
             "name": "CFFinit",
             "type": "software",
             "version": "2.3.1",
-            "url": "https://github.com/fair-software/cffinit_generator",
-            "identifier": "https://w3id.org/everse/tools/cffinit_generator"
+            "url": "https://github.com/citation-file-format/cff-initializer-javascript",
+            "identifier": "https://doi.org/10.5281/zenodo.8224012"
         }
     },
-    "data": [
-        { // checker: software used for the checks  (software schema will be used to describe checker)
-            "version": "0.14.2",
-            "url": "https://github.com/fair-software/howfairis",
-            "identifier": "https://w3id.org/everse/tools/howfairis",
-            "checks": [ // check results for each dimensions
-                {
-                    "indicator": { "@id": "https://w3id.org/everse/i/indicators/license" }, // Example indicator
-                    "output": true, // output of the check
-                    "passed": true, // status of the check
-                    "evidence": "found MIT license (OPTIONAL)" // Optional: provide extra info on how the status was concluded
-                },
-                {
-                    "indicator": { "@id": "https://w3id.org/everse/i/indicators/citation" }, // Example indicator
-                    "output": "valid", // output of the check
-                    "passed": true, // status of the check
-                    "evidence": "Found valid CITATION.cff file in /" // Optional
-                }
-            ]
+    "checks": [ // check results for each indicator
+        {
+            "checker": { // checker: software used for the checks  (software schema will be used to describe checker)
+                "name": "howfairis",
+                "@id": "https://w3id.org/everse/tools/howfairis",
+                "version": "0.14.2"
+            },
+            "indicator": { "@id": "https://w3id.org/everse/i/indicators/license" }, // Example indicator
+            "output": true, // output of the check
+            "passed": true, // status of the check
+            "evidence": "Found MIT license (OPTIONAL)" // Optional: provide extra info on how the status was concluded
+        },
+        {
+            "checker": {
+                "name": "howfairis",
+                "@id": "https://w3id.org/everse/tools/howfairis",
+                "version": "0.14.2"
+            },
+            "indicator": { "@id": "https://w3id.org/everse/i/indicators/citation" },
+            "output": "valid",
+            "passed": true,
+            "evidence": "Found valid CITATION.cff file in /"
         }
     ]
 }
