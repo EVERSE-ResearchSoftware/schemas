@@ -26,7 +26,7 @@
                 },
                 {
                     "indicator": { "@id": "https://w3id.org/everse/i/indicators/citation" }, // Example indicator
-                    "output": "Apache 2.0", // output of the check
+                    "output": "valid", // output of the check
                     "passed": true, // status of the check
                     "evidence": "Found valid CITATION.cff file in /" // Optional
                 }
