@@ -1,20 +1,36 @@
 {
-    "software_1": {
-        "version": "1.0.0",
-        "url": "https://example.org/f-uji/test_15",
-        "identifier": "https://everse.software/some_checker_identifier_ZZ",
-        "overall_score": "2/2",
-        "checks": {
-            "hasPermissiveLicense": {
-                "output": true,
-                "evidence": "found MIT license (OPTIONAL)",
-                "passed": true
-            },
-            "licenseName": {
-                "output": "Apache 2.0",
-                "evidence": "Found the license name in LICENSE file in the repository root (OPTIONAL)",
-                "passed": true
-            }
+    "@context": "https://w3id.org/everse/rsqa#",
+    "meta": {
+        "generated_at": "2025-04-28T15:25:30",
+        "generated_by": "fdiblen@github",
+        "resource": { // the software being assessed
+            "name": "CFFinit",
+            "type": "software",
+            "version": "2.3.1",
+            "url": "https://github.com/fair-software/cffinit_generator",
+            "identifier": "https://w3id.org/everse/tools/cffinit_generator"
         }
-    }
+    },
+    "data": [
+        { // checker: software used for the checks
+            "version": "0.14.2",
+            "url": "https://github.com/fair-software/howfairis",
+            "identifier": "https://w3id.org/everse/tools/howfairis",
+            "overall_score": "2/2", // overall score of the checks performed by the checker software
+            "checks": [ // check results for each dimensions
+                {
+                    "indicator": { "@id": "https://w3id.org/everse/i/indicators/license" }, // Example indicator
+                    "output": true, // output of the check
+                    "passed": true, // status of the check
+                    "evidence": "found MIT license (OPTIONAL)" // Optional: provide extra info on how the status was concluded
+                },
+                {
+                    "indicator": { "@id": "https://w3id.org/everse/i/indicators/citation" }, // Example indicator
+                    "output": "Apache 2.0", // output of the check
+                    "passed": true, // status of the check
+                    "evidence": "Found valid CITATION.cff file in /" // Optional
+                }
+            ]
+        }
+    ]
 }
