@@ -19,8 +19,8 @@
                 "version": "0.14.2"
             },
             "indicator": { "@id": "https://w3id.org/everse/i/indicators/license" }, // Example indicator
-            "output": true, // output of the check
             "passed": true, // status of the check
+            "output": true, // Optional: output of the check
             "evidence": "Found MIT license (OPTIONAL)" // Optional: provide extra info on how the status was concluded
         },
         {
@@ -30,8 +30,8 @@
                 "version": "0.14.2"
             },
             "indicator": { "@id": "https://w3id.org/everse/i/indicators/citation" },
-            "output": "valid",
             "passed": true,
+            "output": "valid",
             "evidence": "Found valid CITATION.cff file in /"
         }
     ]
