@@ -16,7 +16,6 @@
             "version": "0.14.2",
             "url": "https://github.com/fair-software/howfairis",
             "identifier": "https://w3id.org/everse/tools/howfairis",
-            "overall_score": "2/2", // overall score of the checks performed by the checker software
             "checks": [ // check results for each dimensions
                 {
                     "indicator": { "@id": "https://w3id.org/everse/i/indicators/license" }, // Example indicator
