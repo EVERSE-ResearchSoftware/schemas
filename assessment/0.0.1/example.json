@@ -3,7 +3,7 @@
     "meta": {
         "generated_at": "2025-04-28T15:25:30",
         "generated_by": "fdiblen@github",
-        "resource": { // the software being assessed
+        "resource": { // the software being assessed (software schema will be used to describe resource)
             "name": "CFFinit",
             "type": "software",
             "version": "2.3.1",
@@ -12,7 +12,7 @@
         }
     },
     "data": [
-        { // checker: software used for the checks
+        { // checker: software used for the checks  (software schema will be used to describe checker)
             "version": "0.14.2",
             "url": "https://github.com/fair-software/howfairis",
             "identifier": "https://w3id.org/everse/tools/howfairis",
