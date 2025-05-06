@@ -1,36 +1,32 @@
 {
     "@context": "https://w3id.org/everse/rsqa#",
-    "meta": {
-        "generated_at": "2025-04-28T15:25:30",
-        "generated_by": "fdiblen@github",
-        "resource": {
-            "name": "CFFinit",
-            "type": "software",
-            "version": "2.3.1",
-            "url": "https://github.com/citation-file-format/cff-initializer-javascript",
-            "identifier": "https://doi.org/10.5281/zenodo.8224012"
-        }
+    "assessed_software": {
+        "name": "CFFinit",
+        "type": "software",
+        "version": "2.3.1",
+        "url": "https://github.com/citation-file-format/cff-initializer-javascript",
+        "identifier": "https://doi.org/10.5281/zenodo.8224012"
     },
     "checks": [ // check results for each indicator
         {
-            "checker": { // checker: software used for the checks  (software schema will be used to describe checker)
+            "checking_software": { // checking_software: software used for the checks  (software schema will be used to describe checker)
                 "name": "howfairis",
                 "@id": "https://w3id.org/everse/tools/howfairis",
                 "version": "0.14.2"
             },
             "indicator": { "@id": "https://w3id.org/everse/i/indicators/license" }, // Example indicator
-            "passed": true, // status of the check
+            "status": "success", // status of the check: success | failure
             "output": true, // Optional: output of the check
             "evidence": "Found MIT license (OPTIONAL)" // Optional: provide extra info on how the status was concluded
         },
         {
-            "checker": {
+            "checking_software": {
                 "name": "howfairis",
                 "@id": "https://w3id.org/everse/tools/howfairis",
                 "version": "0.14.2"
             },
             "indicator": { "@id": "https://w3id.org/everse/i/indicators/citation" },
-            "passed": true,
+            "status": "success", // status of the check: success | failure
             "output": "valid",
             "evidence": "Found valid CITATION.cff file in /"
         }
