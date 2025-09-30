@@ -17,6 +17,7 @@ Namespaces used in this document:
 |dcterms|[http://purl.org/dc/terms/](http://purl.org/dc/terms/)|
 |dqv|[http://www.w3.org/ns/dqv#](http://www.w3.org/ns/dqv#)|
 |rsqd|[https://w3id.org/everse/rsqd#](https://w3id.org/everse/rsqd#)|
+|vivo|[http://vivoweb.org/ontology/core#](http://vivoweb.org/ontology/core#)|
 
 ### Definitions
 #### Research Software Indicator
@@ -44,6 +45,9 @@ The following metadata attributes define a Research Software Quality indicator:
 | RS Quality Indicator Identifier | identifier | [schema:identifier](https://schema.org/identifier) | [schema:Text](https://schema.org/Text) (String) |
 | Source (e.g., standard/tool where it came from) | source | [dcterms:source](http://purl.org/dc/terms/source) | [schema:URL](https://schema.org/URL) (URL) |
 | Version | version | [schema:version](https://schema.org/version) | [schema:Text](https://schema.org/Text) (String)|
+| Abbreviation | abbreviation | [vivo:abbreviation](https://vivoweb.org/ontology/core#abbreviation) | [schema:Text](https://schema.org/Text) (String)|
+| Alternate name | alternateName | [schema:alternateName](https://schema.org/alternateName) | [schema:Text](https://schema.org/Text) (String)|
+| Same as | sameAs | [schema:sameAs](https://schema.org/sameAs) | [schema:URL](https://schema.org/URL) (URL)|
 
 The `description` of an indicator should address:
 ```

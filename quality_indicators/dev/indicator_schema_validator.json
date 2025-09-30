@@ -110,6 +110,34 @@
             "items": {
                 "type": "string"
             }
+        },
+        "abbreviation": {
+            "type": "string",
+            "default": "",
+            "title": "Short form of the indicator name",
+            "examples": [
+                "short name"
+            ]
+        },
+        "alternateName": {
+            "type": "string",
+            "default": "",
+            "title": "Alternate name available for the indicator",
+            "examples": [
+                "alternate name"
+            ]
+        },
+        "sameAs": {
+            "type": "array",
+            "default": {},
+            "title": "URL of a reference web page that unambiguously indicates the indicator's identity",
+            "items": {
+                "type": "string",
+                "examples": [
+                    "https://example1.com",
+                    "https://example2.com"
+                ]
+            }
         }
     }
 }

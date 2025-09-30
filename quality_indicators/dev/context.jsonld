@@ -7,7 +7,8 @@
     "owl"  : "http://www.w3.org/2002/07/owl#",
     "dcat" : "http://www.w3.org/ns/dcat#",
     "dqv"  : "http://www.w3.org/ns/dqv#",
-    "schema": "http://schema.org/", 
+    "schema": "http://schema.org/",
+    "vivo": "http://vivoweb.org/ontology/core#",
     "contact": { "@id": "dcat:contactPoint", "@type": "@id"},
     "author": { "@id": "schema:author", "@type": "@id"},
     "created": { "@id": "schema:dateCreated"},     
@@ -19,6 +20,9 @@
     "qualityDimension": { "@id": "dqv:inDimension", "@type": "@id"},
     "source": { "@id": "dcterms:source", "@type": "@id"},
     "version": { "@id": "schema:version"},
+    "sameAs": { "@id": "schema:sameAs"},
+    "alternateName": { "@id": "schema:alternateName"},
+    "abbreviation": { "@id": "vivo:abbreviation"},
 
     "SoftwareQualityIndicator": { "@id": "rsqi:SoftwareQualityIndicator", "@type": "@id"}
 

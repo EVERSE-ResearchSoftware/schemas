@@ -15,6 +15,7 @@ Namespaces used in this document:
 |rsqd|[http://purl.org/dc/terms/](https://w3id.org/everse/rsqd#)|
 |schema|[http://schema.org/](http://schema.org/)| 
 |dcterms|[http://purl.org/dc/terms/](http://purl.org/dc/terms/)|
+|vivo|[http://vivoweb.org/ontology/core#](http://vivoweb.org/ontology/core#)|
 
 ### Definitions
 #### Research Software Quality Dimension (rsqd:ResearchSoftwareQualityDimension) 
@@ -30,7 +31,8 @@ The following metadata attributes define a Research Software Quality dimension:
 |Name|name|[schema:name](https://schema.org/name)|[schema:Text](https://schema.org/Text) (String)|
 |Brief description|description|[schema:description]((https://schema.org/description))|[schema:Text](https://schema.org/Text) (String)|
 |Is part of another dimension (in case there is a hierarcy)|isPartOf|[schema:isPartOf](https://schema.org/isPartOf)|[rsqd:SoftwareQualityDimension](https://w3id.org/everse/rsqd#research-software-quality-dimension) (URL)|
-|Definition source (in case the quality dimension is defined elsewhere, e.g., ISO standard)|source|[dcterms:source](http://purl.org/dc/terms/source)|[schema:URL](https://schema.org/URL)|
+|Definition source (in case the quality dimension is defined elsewhere, e.g., ISO standard)|source|[dcterms:source](http://purl.org/dc/terms/source)|[schema:URL](https://schema.org/URL) (URL)|
+|Abbreviation|abbreviation|[vivo:abbreviation](http://vivoweb.org/ontology/core#abbreviation)|[schema:Text](https://schema.org/Text) (String)|
 
 To see an example of a dimension, see the [JSON file](example.json) or the [the YAML file](example.yaml) stored in this repository.
 

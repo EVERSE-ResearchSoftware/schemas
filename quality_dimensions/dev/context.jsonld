@@ -1,6 +1,7 @@
 {
   "@context": {
-    "schema": "http://schema.org/", 
+    "schema": "http://schema.org/",
+    "vivo": "http://vivoweb.org/ontology/core#",
     "dcterms": "http://purl.org/dc/terms/",
     "rsqd" : "https://w3id.org/everse/rsqd#",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
@@ -12,6 +13,7 @@
     "description": { "@id": "schema:description"},
     "source": { "@id": "dcterms:source", "@type": "@id"},
     "isPartOf": { "@id": "schema:isPartOf", "@type": "@id"},
+    "abbreviation": { "@id": "vivo:abbreviation"},
 
     "SoftwareQualityDimension": { "@id": "rsqd:SoftwareQualityDimension", "@type": "@id"}
   },
