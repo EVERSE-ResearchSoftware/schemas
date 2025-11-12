@@ -7,7 +7,7 @@
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "owl": "http://www.w3.org/2002/07/owl#",
     "codemeta": "https://w3id/org/codemeta/",
-    "rs": "https://w3id.org/everse/rs#",
+    "rs": "https://w3id.org/everse/rs/0.0.2",
     "dim": "https://w3id.org/everse/i/dimensions/",
     "ind": "https://w3id.org/everse/i/indicators/",
 
