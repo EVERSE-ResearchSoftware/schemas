@@ -1,0 +1,105 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "rsqd": "https://w3id.org/everse/rsqd#",
+    "rsqi": "https://w3id.org/everse/rsqi#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "codemeta": "https://w3id/org/codemeta/",
+    "rs": "https://w3id.org/everse/rs#",
+    "dim": "https://w3id.org/everse/i/dimensions/",
+    "ind": "https://w3id.org/everse/i/indicators/",
+
+    "SoftwareQualityIndicator": { "@id": "rsqi:SoftwareQualityIndicator" },
+    "SoftwareQualityDimension": { "@id": "rsqd:SoftwareQualityDimension" },
+    "maintainer": { "@id": "codemeta:maintainer" },
+
+    "SoftwareApplication": { "@id": "schema:SoftwareApplication" },
+    "applicationCategory": { "@id": "schema:applicationCategory", "@type": "@id" },
+    "author": { "@id": "schema:author", "@type": "@id" },
+    "description": "schema:description",
+    "name": "schema:name",
+    "url": { "@id": "schema:url", "@type": "@id" },
+    "identifier": { "@id": "schema:identifier", "@type": "@id" },
+    "isAccessibleForFree": "schema:isAccessibleForFree",
+    "license": { "@id": "schema:license", "@type": "@id" },
+    "dateCreated": { "@id": "schema:dateCreated", "@type": "@id" },
+
+    "hasQualityDimension": { "@id": "rs:hasQualityDimension", "@type": "@id" },
+    "hasQualityIndicator": { "@id": "rs:hasQualityIndicator", "@type": "@id" },
+    "howToUse": { "@id": "rs:howToUse"},
+    "usedBy": { "@id": "rs:usedBy", "@type": "@id" },
+    "appliesToProgrammingLanguage": { "@id": "rs:appliesToProgrammingLanguage", "@type": "@id" },
+    "AnalysisCode": { "@id": "rs:AnalysisCode", "@type": "@id" },
+    "PrototypeTool": { "@id": "rs:PrototypeTool", "@type": "@id" },
+    "ResearchInfrastructureSoftware": { "@id": "rs:ResearchInfrastructureSoftware", "@type": "@id" }
+  },
+  "@graph": [
+    {
+      "@id": "rs:hasQualityDimension",
+      "@type": "rdf:Property",
+      "rdfs:label": "has quality dimension",
+      "rdfs:comment": "Property designed to link a software tool with its corresponding quality dimensions.",
+      "schema:domainIncludes": { "@id": "SoftwareApplication" },
+      "schema:rangeIncludes": { "@id": "SoftwareQualityDimension" }
+    },
+    {
+      "@id": "rs:hasQualityIndicator",
+      "@type": "rdf:Property",
+      "rdfs:label": "has quality indicator",
+      "rdfs:comment": "Property that links a software application with its corresponding quality indicators.",
+      "schema:domainIncludes": { "@id": "SoftwareApplication" },
+      "schema:rangeIncludes": { "@id": "SoftwareQualityIndicator" }
+    },
+    {
+      "@id": "rs:howToUse",
+      "@type": "rdf:Property",
+      "rdfs:label": "howToUse",
+      "rdfs:comment": "Property that indicates how a software application is expected to be used (command line, CI/CD, service, etc.).",
+      "schema:domainIncludes": { "@id": "SoftwareApplication" },
+      "schema:rangeIncludes": { "@id": "schema:Text" }
+    },
+    {
+      "@id": "rs:usedBy",
+      "@type": "rdf:Property",
+      "rdfs:label": "Used by",
+      "rdfs:comment": "Property that indicates how a software application is used by a science cluster.",
+      "schema:domainIncludes": { "@id": "SoftwareApplication" },
+      "schema:rangeIncludes": { "@id": "schema:Text" }
+    },
+    {
+      "@id": "rs:appliesToProgrammingLanguage",
+      "@type": "rdf:Property",
+      "rdfs:label": "Applies to programming language",
+      "rdfs:comment": "Property that indicates how a software tool applies to a given programming language.",
+      "schema:domainIncludes": { "@id": "SoftwareApplication" },
+      "schema:rangeIncludes": { "@id": "schema:Text" }
+    },
+    {
+      "@id": "rs:AnalysisCode",
+      "rdfs:label": "Analysis Code",
+      "rdfs:comment": "Software tier type used to categorize scripts and tools designed to support a research publication or investigation, with a low level of maturity"
+    },
+    {
+      "@id": "rs:PrototypeTool",
+      "rdfs:label": "Prototype tool",
+      "rdfs:comment": "Software tier type used to categorize tools designed to support a research publication or investigation that have reached a level of maturity and reuse among the community"
+    },
+    {
+      "@id": "rs:ResearchInfrastructureSoftware",
+      "rdfs:label": "Research infrasturcture software",
+      "rdfs:comment": "Software tier type used to categorize mature tools that are used by one or several Research Infrastructures and/or science communities"
+    },
+    {
+      "@id": "https://w3id.org/everse/rs#",
+      "@type": [ "http://www.w3.org/2002/07/owl#Ontology" ],
+      "creator": [ "Daniel Garijo", "Thomas Vuillaume", "Faruk Diblen", "EVERSE Project" ],
+      "dateCreated": "2025-01-20T09:00:00",
+      "name": "EVERSE Research Software vocabulary",
+      "identifier": { "@id": "https://w3id.org/everse/rs#", "@type": "@id" },
+      "owl:versionIRI": { "@id": "https://w3id.org/everse/rs/0.0.1", "@type": "@id" },
+      "license": { "@id": "https://creativecommons.org/licenses/by/4.0/", "@type": "@id" }
+    }
+  ]
+}
