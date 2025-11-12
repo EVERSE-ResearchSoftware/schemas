@@ -1,8 +1,8 @@
 # EVERSE Research Software metadata schema
-- Version: dev
+- Version: 0.0.2
 - Identifier: https://w3id.org/everse/rs#
-- Version identifier: https://w3id.org/everse/rs/dev
-- Date: 
+- Version identifier: https://w3id.org/everse/rs/0.0.2
+- Date: 12/11/2025
 
 A repository to describe the Research Software metadata, for the tools described within the EVERSE project.
 This metadata schema relies heavily on [CodeMeta](https://codemeta.github.io/terms/) and [Schema.org](http://schema.org/)), extending them when needed to 
@@ -81,6 +81,6 @@ curl -sH "accept:application/ld+json" -L https://w3id.org/everse/rs
 The vocabulary has versioning enabled. To get a particular version add the version number in the URL:
 
 ```
-curl -sH "accept:application/ld+json" -L https://w3id.org/everse/rs/0.0.1
+curl -sH "accept:application/ld+json" -L https://w3id.org/everse/rs/0.0.2
 ```
 
