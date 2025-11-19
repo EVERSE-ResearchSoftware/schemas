@@ -1,0 +1,40 @@
+name: Deploy to GitHub Pages
+
+on: push
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install Zensical
+        run: |
+          pip install zensical
+
+      - name: Prepare documentation
+        run: |
+          cd docs
+          ./prepare_docs.sh
+          cd ..
+
+      - name: Build documentation
+        run: |
+          zensical build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main'}}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
