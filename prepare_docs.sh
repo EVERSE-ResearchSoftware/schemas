@@ -33,6 +33,7 @@ link_readme() {
 }
 
 # Link root README
+mkdir -p "$DOCS_DIR"
 ln -f "$ROOT_DIR/README.md" "$DOCS_DIR/index.md"
 echo "Linked root README.md to $DOCS_DIR/index.md"
 
