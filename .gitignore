@@ -1,4 +1,6 @@
 # Documentation build artifacts
-docs/*.md
+docs/
+site/
 
-
+# Other
+.DS_Store

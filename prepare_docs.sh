@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Base directory for docs
-DOCS_DIR="."
-ROOT_DIR=".."
+DOCS_DIR="docs"
+ROOT_DIR="."
 
 # Clean up existing md files in docs (but not the script itself)
 find "$DOCS_DIR" -name "*.md" -type f -delete
@@ -34,7 +34,7 @@ link_readme() {
 
 # Link root README
 ln -f "$ROOT_DIR/README.md" "$DOCS_DIR/index.md"
-echo "Linked root README.md"
+echo "Linked root README.md to $DOCS_DIR/index.md"
 
 # Link schemas
 link_readme "$ROOT_DIR/quality_dimensions" "$DOCS_DIR/quality_dimensions"
