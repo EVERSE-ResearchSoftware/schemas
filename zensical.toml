@@ -1,0 +1,5 @@
+[project]
+site_name = "EVERSE Schemas Documentation"
+site_url = "https://EVERSE-ResearchSoftware.github.io/schemas/"
+
+# Navigation is auto-discovered from the file structure
