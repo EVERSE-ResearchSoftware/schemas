@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
-        <loc>https://EVERSE-ResearchSoftware.github.io/schemas/</loc>
+        <loc>https://everse.software/schemas/</loc>
       </url>
       <url>
-        <loc>https://EVERSE-ResearchSoftware.github.io/schemas/quality_dimensions/</loc>
+        <loc>https://everse.software/schemas/quality_dimensions/</loc>
       </url>
       <url>
-        <loc>https://EVERSE-ResearchSoftware.github.io/schemas/quality_dimensions/0.0.1/</loc>
+        <loc>https://everse.software/schemas/quality_dimensions/0.0.1/</loc>
       </url>
       <url>
-        <loc>https://EVERSE-ResearchSoftware.github.io/schemas/quality_dimensions/0.0.2/</loc>
+        <loc>https://everse.software/schemas/quality_dimensions/0.0.2/</loc>
       </url>
       <url>
-        <loc>https://EVERSE-ResearchSoftware.github.io/schemas/quality_dimensions/dev/</loc>
+        <loc>https://everse.software/schemas/quality_dimensions/dev/</loc>
       </url>
       <url>
-        <loc>https://EVERSE-ResearchSoftware.github.io/schemas/quality_indicators/</loc>
+        <loc>https://everse.software/schemas/quality_indicators/</loc>
       </url>
       <url>
-        <loc>https://EVERSE-ResearchSoftware.github.io/schemas/quality_indicators/0.0.1/</loc>
+        <loc>https://everse.software/schemas/quality_indicators/0.0.1/</loc>
       </url>
       <url>
-        <loc>https://EVERSE-ResearchSoftware.github.io/schemas/quality_indicators/0.0.2/</loc>
+        <loc>https://everse.software/schemas/quality_indicators/0.0.2/</loc>
       </url>
       <url>
-        <loc>https://EVERSE-ResearchSoftware.github.io/schemas/quality_indicators/dev/</loc>
+        <loc>https://everse.software/schemas/quality_indicators/dev/</loc>
       </url>
       <url>
-        <loc>https://EVERSE-ResearchSoftware.github.io/schemas/software/</loc>
+        <loc>https://everse.software/schemas/software/</loc>
       </url>
       <url>
-        <loc>https://EVERSE-ResearchSoftware.github.io/schemas/software/0.0.1/</loc>
+        <loc>https://everse.software/schemas/software/0.0.1/</loc>
       </url>
       <url>
-        <loc>https://EVERSE-ResearchSoftware.github.io/schemas/software/dev/</loc>
+        <loc>https://everse.software/schemas/software/dev/</loc>
       </url>
 </urlset>
