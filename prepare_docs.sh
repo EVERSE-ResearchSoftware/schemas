@@ -4,9 +4,8 @@
 DOCS_DIR="docs"
 ROOT_DIR="."
 
-# Clean up existing md files in docs (but not the script itself)
-find "$DOCS_DIR" -name "*.md" -type f -delete
-find "$DOCS_DIR" -type d -empty -delete
+rm -rf "$DOCS_DIR"
+mkdir -p "$DOCS_DIR"
 
 # Function to link readme files
 link_readme() {
@@ -33,7 +32,6 @@ link_readme() {
 }
 
 # Link root README
-mkdir -p "$DOCS_DIR"
 ln -f "$ROOT_DIR/README.md" "$DOCS_DIR/index.md"
 echo "Linked root README.md to $DOCS_DIR/index.md"
 
