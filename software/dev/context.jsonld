@@ -27,7 +27,8 @@
     "dateCreated": { "@id": "schema:dateCreated", "@type": "@id" },
 
     "hasQualityDimension": { "@id": "rs:hasQualityDimension", "@type": "@id" },
-    "hasQualityIndicator": { "@id": "rs:hasQualityIndicator", "@type": "@id" },
+    "MeasuresQualityIndicator": { "@id": "rs:MeasuresQualityIndicator", "@type": "@id" },
+    "ImprovesQualityIndicator": { "@id": "rs:ImprovesQualityIndicator", "@type": "@id" },
     "howToUse": { "@id": "rs:howToUse"},
     "usedBy": { "@id": "rs:usedBy", "@type": "@id" },
     "appliesToProgrammingLanguage": { "@id": "rs:appliesToProgrammingLanguage", "@type": "@id" },
@@ -45,10 +46,18 @@
       "schema:rangeIncludes": { "@id": "SoftwareQualityDimension" }
     },
     {
-      "@id": "rs:hasQualityIndicator",
+      "@id": "rs:MeasuresQualityIndicator",
       "@type": "rdf:Property",
-      "rdfs:label": "has quality indicator",
-      "rdfs:comment": "Property that links a software application with its corresponding quality indicators.",
+      "rdfs:label": "measures quality indicator",
+      "rdfs:comment": "Property that links a software application with the corresponding quality indicators it can measure.",
+      "schema:domainIncludes": { "@id": "SoftwareApplication" },
+      "schema:rangeIncludes": { "@id": "SoftwareQualityIndicator" }
+    },
+    {
+      "@id": "rs:ImprovesQualityIndicator",
+      "@type": "rdf:Property",
+      "rdfs:label": "improves quality indicator",
+      "rdfs:comment": "Property that links a software application with the corresponding quality indicators it can measure.",
       "schema:domainIncludes": { "@id": "SoftwareApplication" },
       "schema:rangeIncludes": { "@id": "SoftwareQualityIndicator" }
     },
