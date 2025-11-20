@@ -1,0 +1,21 @@
+{
+  "@context": "https://w3id.org/everse/rsqi#",
+  "@id": "https://w3id.org/everse/i/indicators/codemeta_completeness",
+  "@type": "SoftwareQualityIndicator",
+  "name": "Contribution Process and Project Purpose",
+  "identifier":"https://w3id.org/everse/i/indicators/codemeta_completeness",
+  "description": "Software includes clear contribution instructions, software purpose on project website, feedback channels, and version control practices.",
+  "status": "Active",
+  "keywords": [
+    "contribution guidelines",
+    "feedback channel",
+    "software purpose"
+  ],   
+  "version": "1.0.0",
+  "contact": {
+      "@type": "schema:Person",
+      "name": "Daniel Garijo"
+    },
+  "source": {"@id":"https://www.bestpractices.dev/en/criteria/0"},
+  "qualityDimension": {"@id":"https://w3id.org/everse/i/dimensions/interaction_capability"}
+}       

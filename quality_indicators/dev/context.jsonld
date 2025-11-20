@@ -1,0 +1,50 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "rsqi" : "https://w3id.org/everse/rsqi#",
+    "rsqd" : "https://w3id.org/everse/rsqd#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "owl"  : "http://www.w3.org/2002/07/owl#",
+    "dcat" : "http://www.w3.org/ns/dcat#",
+    "dqv"  : "http://www.w3.org/ns/dqv#",
+    "schema": "http://schema.org/",
+    "vivo": "http://vivoweb.org/ontology/core#",
+    "contact": { "@id": "dcat:contactPoint", "@type": "@id"},
+    "author": { "@id": "schema:author", "@type": "@id"},
+    "created": { "@id": "schema:dateCreated"},     
+    "description": { "@id": "schema:description"},
+    "name": { "@id": "schema:name"},
+    "status": { "@id": "schema:creativeWorkStatus"},
+    "keywords": { "@id": "schema:keywords"},
+    "identifier": { "@id": "schema:identifier", "@type": "@id"},
+    "qualityDimension": { "@id": "dqv:inDimension", "@type": "@id"},
+    "source": { "@id": "dcterms:source", "@type": "@id"},
+    "version": { "@id": "schema:version"},
+    "sameAs": { "@id": "schema:sameAs"},
+    "alternateName": { "@id": "schema:alternateName"},
+    "abbreviation": { "@id": "vivo:abbreviation"},
+
+    "SoftwareQualityIndicator": { "@id": "rsqi:SoftwareQualityIndicator", "@type": "@id"}
+
+  },
+  "@graph": [
+    {
+      "@id": "rsqi:SoftwareQualityIndicator",
+      "@type": "rdfs:Class",
+      "rdfs:subClassOf":"dqv:Metric",
+      "rdfs:label": "Software Quality Indicator",
+      "rdfs:comment": "A software quality indicator represents a specific aspect software that can be measured (e.g., FAIRness, test coverage, documentation coverage, etc.)"
+    },
+     {
+      "@id" : "https://w3id.org/everse/rsqi#",
+      "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+      "dcterms:creator" : [ "Daniel Garijo","Faruk Diblen", "EVERSE Project" ],
+      "dcterms:created":"2025-04-03T09:00:00",
+      "schema:version":"0.0.2",
+      "title":"Research Software Quality Indicator vocabulary",
+      "identifier": {"@id": "https://w3id.org/everse/rsqi#", "@type": "@id"},
+      "owl:versionIRI": {"@id": "https://w3id.org/everse/rsqi/0.0.2", "@type": "@id"},
+      "dcterms:license": {"@id": "https://creativecommons.org/licenses/by/4.0/", "@type": "@id"}
+     }
+  ]
+}

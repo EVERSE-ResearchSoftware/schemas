@@ -1,0 +1,40 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "vivo": "http://vivoweb.org/ontology/core#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "rsqd" : "https://w3id.org/everse/rsqd#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "owl"  : "http://www.w3.org/2002/07/owl#",
+    "prov"  : "http://www.w3.org/ns/prov#",
+    "identifier": { "@id": "schema:identifier"},
+    "name": { "@id": "schema:name"},
+    "url": { "@id": "schema:url"},
+    "description": { "@id": "schema:description"},
+    "source": { "@id": "dcterms:source", "@type": "@id"},
+    "isPartOf": { "@id": "schema:isPartOf", "@type": "@id"},
+    "abbreviation": { "@id": "vivo:abbreviation"},
+
+    "SoftwareQualityDimension": { "@id": "rsqd:SoftwareQualityDimension", "@type": "@id"}
+  },
+  "@graph": [
+    {
+      "@id": "rsqd:SoftwareQualityDimension",
+      "@type": "rdfs:Class",
+      "rdfs:label": "Software Quality Dimension",
+      "rdfs:comment": "A research software quality dimension represents criteria relevant for assessing software quality (e.g., Documentation, Performance, etc.). Each quality dimension must have one or more indicator to measure it. Dimensions may be defined in a hierarchy.",
+      "rdfs:subClassOf": {"@id": "http://www.w3.org/ns/dqv#Dimension"}
+    },
+     {
+      "@id" : "https://w3id.org/everse/rsqd#",
+      "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+      "schema:creator" : [ "Daniel Garijo","Thomas Vuillaume","EVERSE Project" ],
+      "schema:dateCreated":"2025-04-01T09:00:00",
+      "schema:version":"0.0.2",
+      "name":"Research Software Quality Dimension vocabulary",
+      "identifier": {"@id": "https://w3id.org/everse/rsqd#", "@type": "@id"},
+      "owl:versionIRI": {"@id": "https://w3id.org/everse/rsqd/0.0.2", "@type": "@id"},
+      "schema:license": {"@id": "https://creativecommons.org/licenses/by/4.0/", "@type": "@id"}
+     }
+  ]
+}
