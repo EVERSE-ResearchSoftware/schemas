@@ -11,6 +11,8 @@ mkdir -p "$DOCS_DIR"
 
 echo "Preparing documentation directory: $DOCS_DIR"
 
+cp "$ROOT_DIR/README.md" "$DOCS_DIR/README.md"
+
 # Top-level schema directories to include
 SCHEMA_DIRS=("quality_dimensions" "quality_indicators" "software")
 
