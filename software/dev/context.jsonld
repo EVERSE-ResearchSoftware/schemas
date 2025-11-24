@@ -54,7 +54,7 @@
       "schema:rangeIncludes": { "@id": "SoftwareQualityIndicator" }
     },
     {
-      "@id": "rs:ImprovesQualityIndicator",
+      "@id": "rs:improvesQualityIndicator",
       "@type": "rdf:Property",
       "rdfs:label": "improves quality indicator",
       "rdfs:comment": "Property that links a software application with the corresponding quality indicators it improves.",
