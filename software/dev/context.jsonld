@@ -57,7 +57,7 @@
       "@id": "rs:ImprovesQualityIndicator",
       "@type": "rdf:Property",
       "rdfs:label": "improves quality indicator",
-      "rdfs:comment": "Property that links a software application with the corresponding quality indicators it can measure.",
+      "rdfs:comment": "Property that links a software application with the corresponding quality indicators it improves.",
       "schema:domainIncludes": { "@id": "SoftwareApplication" },
       "schema:rangeIncludes": { "@id": "SoftwareQualityIndicator" }
     },
