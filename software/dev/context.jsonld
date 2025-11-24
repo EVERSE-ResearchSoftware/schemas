@@ -28,7 +28,7 @@
 
     "hasQualityDimension": { "@id": "rs:hasQualityDimension", "@type": "@id" },
     "measuresQualityIndicator": { "@id": "rs:measuresQualityIndicator", "@type": "@id" },
-    "ImprovesQualityIndicator": { "@id": "rs:ImprovesQualityIndicator", "@type": "@id" },
+    "improvesQualityIndicator": { "@id": "rs:improvesQualityIndicator", "@type": "@id" },
     "howToUse": { "@id": "rs:howToUse"},
     "usedBy": { "@id": "rs:usedBy", "@type": "@id" },
     "appliesToProgrammingLanguage": { "@id": "rs:appliesToProgrammingLanguage", "@type": "@id" },
