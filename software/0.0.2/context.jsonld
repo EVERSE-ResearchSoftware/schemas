@@ -7,7 +7,7 @@
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "owl": "http://www.w3.org/2002/07/owl#",
     "codemeta": "https://w3id/org/codemeta/",
-    "rs": "https://w3id.org/everse/rs/0.0.2",
+    "rs": "https://w3id.org/everse/rs#",
     "dim": "https://w3id.org/everse/i/dimensions/",
     "ind": "https://w3id.org/everse/i/indicators/",
 
@@ -27,7 +27,8 @@
     "dateCreated": { "@id": "schema:dateCreated", "@type": "@id" },
 
     "hasQualityDimension": { "@id": "rs:hasQualityDimension", "@type": "@id" },
-    "hasQualityIndicator": { "@id": "rs:hasQualityIndicator", "@type": "@id" },
+    "measuresQualityIndicator": { "@id": "rs:measuresQualityIndicator", "@type": "@id" },
+    "improvesQualityIndicator": { "@id": "rs:improvesQualityIndicator", "@type": "@id" },
     "howToUse": { "@id": "rs:howToUse"},
     "usedBy": { "@id": "rs:usedBy", "@type": "@id" },
     "appliesToProgrammingLanguage": { "@id": "rs:appliesToProgrammingLanguage", "@type": "@id" },
@@ -45,10 +46,18 @@
       "schema:rangeIncludes": { "@id": "SoftwareQualityDimension" }
     },
     {
-      "@id": "rs:hasQualityIndicator",
+      "@id": "rs:measuresQualityIndicator",
       "@type": "rdf:Property",
-      "rdfs:label": "has quality indicator",
-      "rdfs:comment": "Property that links a software application with its corresponding quality indicators.",
+      "rdfs:label": "measures quality indicator",
+      "rdfs:comment": "Property that links a software application with the corresponding quality indicators it measures.",
+      "schema:domainIncludes": { "@id": "SoftwareApplication" },
+      "schema:rangeIncludes": { "@id": "SoftwareQualityIndicator" }
+    },
+    {
+      "@id": "rs:improvesQualityIndicator",
+      "@type": "rdf:Property",
+      "rdfs:label": "improves quality indicator",
+      "rdfs:comment": "Property that links a software application with the corresponding quality indicators it improves.",
       "schema:domainIncludes": { "@id": "SoftwareApplication" },
       "schema:rangeIncludes": { "@id": "SoftwareQualityIndicator" }
     },

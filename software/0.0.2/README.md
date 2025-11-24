@@ -2,7 +2,7 @@
 - Version: 0.0.2
 - Identifier: https://w3id.org/everse/rs#
 - Version identifier: https://w3id.org/everse/rs/0.0.2
-- Date: 12/11/2025
+- Date: 24/11/2025
 
 A repository to describe the Research Software metadata, for the tools described within the EVERSE project.
 This metadata schema relies heavily on [CodeMeta](https://codemeta.github.io/terms/) and [Schema.org](http://schema.org/)), extending them when needed to 
@@ -29,18 +29,20 @@ The following attributes describe a RS tool (please note that not all are mandat
 | Applies to Programming language | rs:appliesToProgrammingLanguage | schema:Text (string)| N/A |
 | Author | schema:author | schema:Person or schema:Organization (URL) | N/A |
 | Description | schema:description | schema:Text (string)| N/A |
-| How to use the tool? | rs:howToUse | schema:Text (string) | online-service, CI/CD, command-line |
+| How to use the tool? | rs:howToUse | schema:Text (string) | online-service, CI/CD, command-line, library |
 | Name of the tool | schema:name | schema:Text (string)| N/A |
 | Identifier | schema:identifier | schema:URL (string)| N/A |
 | Is accessible for free? | schema:isAccessibleForFree | schema:Boolean| N/A |
-| Quality indicator(s) the tool addresses | rs:hasQualityIndicator | rsqi:SoftwareQualityIndicator (URL) | N/A |
-| Quality dimension(s) the tool addresses | rs:hasQualityDimension | rsqd:SoftwareQualityDimension (URL) | See https://everse.software/indicators/website/dimensions.html |
+| Quality indicator(s) the tool measures | rs:measuresQualityIndicator | rsqi:SoftwareQualityIndicator (URL) | See https://w3id.org/everse/i/indicators/|
+| Quality indicator(s) the tool improves | rs:improvesQualityIndicator | rsqi:SoftwareQualityIndicator (URL) | See https://w3id.org/everse/i/indicators/ |
+| Quality dimension(s) the tool addresses | rs:hasQualityDimension | rsqd:SoftwareQualityDimension (URL) | See https://w3id.org/everse/i/dimensions/ |
 | License | schema:license | schema:License (URL or CreativeWork)| N/A |
 | Maintainer | codemeta:maintainer | schema:Person or schema:Organization | N/A |
 | URL | schema:url | schema:URL (string)| N/A |
 | Cluster/Community using the tool, if specific | rs:usedBy | schema:Text (string) | ENVRI, ESCAPE, LS-RI, PaNOSC, SSHOC |
 
-### Application categories
+### applicationCategory
+
 The type of applications categories recognized are:
 - `AnalysisCode`: Software tier type used to categorize scripts and tools designed to support a research publication or investigation, with a low level of maturity
 - `PrototypeTool`: Software tier type used to categorize tools designed to support a research publication or investigation that have reached a level of maturity and reuse among the community
@@ -48,23 +50,42 @@ The type of applications categories recognized are:
 
 Each of the categories have an identifier: `https://w3id.org/everse/rs#{id}` where the id is one of the keys used in the list above (e.g., `https://w3id.org/everse/rs#PrototypeTool`)
 
-### Quality dimensions
+### hasQualityDimension
 
 The dimensions recognized are described in https://w3id.org/everse/i/dimensions/
 
 Each of the dimensions has an identifier: `https://w3id.org/everse/rs#{id}` where the id is one of the keys used in the list above (e.g., `https://w3id.org/everse/rs#FAIRness`)
 
-### How to use
+### Quality indicators
+
+The recognized indicators are described in https://w3id.org/everse/i/indicators/
+
+Use the following properties to relate a tool to specific software quality indicators (URIs from the indicators registry):
+
+- `rs:measuresQualityIndicator`: Declare the indicators that the tool evaluates, assesses, or reports on. Use when the tool can check, validate, or output a metric for an indicator. Value: one or more `rsqi:SoftwareQualityIndicator` URIs under https://w3id.org/everse/i/indicators/.
+- `rs:improvesQualityIndicator`: Declare the indicators that the tool directly helps improve when used (e.g., linters improving code quality, CI improving reproducibility). Value: one or more `rsqi:SoftwareQualityIndicator` URIs under https://w3id.org/everse/i/indicators/.
+
+<details><summary>Notes</summary>
+
+- The same indicator can be provided in both properties if the tool both measures and improves it.
+- Use stable indicator URIs from the EVERSE registry.
+- Multiple indicators can be listed for each property.
+
+</details>
+
+### howToUse
 
 The values for this property indicate how a software application can be used (can be a list if several are applicable).
 The recognized values are:
 - `online-service`: The software is available as an online service, e.g., via a web interface or API
 - `CI/CD`: The software is available as part of a continuous integration and/or continuous deployment pipeline
 - `command-line`: The software is available as a command line interface, e.g., via a command line tool or script
+- `library`: The software is available as a library to be included in other software applications
 
-### Custer/Community
+### usedBy 
 
-The clusters are described in https://everse.software/RSQKit/research_clusters_and_infrastructures. If the community is not part of these clusters, it can be added as free text.
+The clusters are described in https://everse.software/RSQKit/research_clusters_and_infrastructures. 
+If the community is not part of these clusters, it can be added as free text.
 
 ## Example
 

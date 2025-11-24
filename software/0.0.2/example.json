@@ -8,6 +8,13 @@
   "identifier": "https://example.org/howfairis",
   "isAccessibleForFree": true,
   "hasQualityDimension": { "@id": "dim:fairness", "@type": "@id" },
+	"rs:measuresQualityIndicator": [
+		"https://w3id.org/everse/i/indicators/software_has_citation",
+		"https://w3id.org/everse/i/indicators/versioning_standards_use"
+	],
+	"rs:improvesQualityIndicator": [
+		"https://w3id.org/everse/i/indicators/software_documentation"
+	],
   "howToUse": [ "CI/CD", "command-line" ],
   "license": { "@id":"https://spdx.org/licenses/Apache-2.0", "@type": "@id" },
   "applicationCategory": { "@id":"rs:PrototypeTool", "@type": "@id" }
