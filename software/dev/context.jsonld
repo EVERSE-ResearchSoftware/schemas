@@ -49,7 +49,7 @@
       "@id": "rs:MeasuresQualityIndicator",
       "@type": "rdf:Property",
       "rdfs:label": "measures quality indicator",
-      "rdfs:comment": "Property that links a software application with the corresponding quality indicators it can measure.",
+      "rdfs:comment": "Property that links a software application with the corresponding quality indicators it measures.",
       "schema:domainIncludes": { "@id": "SoftwareApplication" },
       "schema:rangeIncludes": { "@id": "SoftwareQualityIndicator" }
     },
