@@ -46,7 +46,7 @@
       "schema:rangeIncludes": { "@id": "SoftwareQualityDimension" }
     },
     {
-      "@id": "rs:MeasuresQualityIndicator",
+      "@id": "rs:measuresQualityIndicator",
       "@type": "rdf:Property",
       "rdfs:label": "measures quality indicator",
       "rdfs:comment": "Property that links a software application with the corresponding quality indicators it measures.",
