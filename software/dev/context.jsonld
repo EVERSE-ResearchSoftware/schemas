@@ -27,7 +27,7 @@
     "dateCreated": { "@id": "schema:dateCreated", "@type": "@id" },
 
     "hasQualityDimension": { "@id": "rs:hasQualityDimension", "@type": "@id" },
-    "MeasuresQualityIndicator": { "@id": "rs:MeasuresQualityIndicator", "@type": "@id" },
+    "measuresQualityIndicator": { "@id": "rs:measuresQualityIndicator", "@type": "@id" },
     "ImprovesQualityIndicator": { "@id": "rs:ImprovesQualityIndicator", "@type": "@id" },
     "howToUse": { "@id": "rs:howToUse"},
     "usedBy": { "@id": "rs:usedBy", "@type": "@id" },
