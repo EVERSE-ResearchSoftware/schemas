@@ -43,7 +43,7 @@ The following metadata attributes define a Research Software Quality indicator:
 | Keywords | keywords | [schema:keywords](https://schema.org/keywords) | [schema:Text](https://schema.org/Text) (String)|
 | RS Quality Dimension  | qualityDimension | [dqv:inDimension](http://www.w3.org/ns/dqv#inDimension) | [rsqd:SoftwareQualityDimension](https://w3id.org/everse/rsqd#) (URL) |
 | RS Quality Indicator Identifier | identifier | [schema:identifier](https://schema.org/identifier) | [schema:Text](https://schema.org/Text) (String) |
-| Source (e.g., standard/tool where it came from) | source | [dcterms:source](http://purl.org/dc/terms/source) | [schema:URL](https://schema.org/URL) (URL) |
+| Source (i.e., document, website or specification where the indicator was retrieved from) | source | [dcterms:source](http://purl.org/dc/terms/source) | [schema:URL](https://schema.org/URL) (URL) |
 | Version | version | [schema:version](https://schema.org/version) | [schema:Text](https://schema.org/Text) (String)|
 | Abbreviation | abbreviation | [vivo:abbreviation](https://vivoweb.org/ontology/core#abbreviation) | [schema:Text](https://schema.org/Text) (String)|
 | Alternate name | alternateName | [schema:alternateName](https://schema.org/alternateName) | [schema:Text](https://schema.org/Text) (String)|
