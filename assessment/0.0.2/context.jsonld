@@ -1,0 +1,113 @@
+{
+    "@context": {
+        "schema": "http://schema.org/",
+        "rsqa": "https://w3id.org/everse/rsqa#",
+        "rsqi": "https://w3id.org/everse/rsqi#",
+        "rs": "https://w3id.org/everse/rs#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "dcterms": "http://purl.org/dc/terms/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "name": "schema:name",
+        "description": "schema:description",
+        "creator": "schema:creator",
+        "dateCreated": "schema:dateCreated",
+        "version": "schema:version",
+        "license": { "@id": "schema:license", "@type": "@id" },
+        "checks": { "@id": "rsqa:hasCheckResult", "@type": "@id" },
+        "status": { "@id": "schema:actionStatus", "@type": "@id" },
+        "process": { "@id": "schema:actionProcess", "@type": "@id" },
+        "output": "rsqa:checkOutput",
+        "evidence": "rsqa:checkEvidence",
+        "SoftwareQualityAssessment": "rsqa:SoftwareQualityAssessment",
+        "CheckResult": "rsqa:CheckResult",
+        "assessedSoftware": { "@id": "rsqa:assessedSoftware", "@type": "@id" },
+        "checkingSoftware": { "@id": "rsqa:checkingSoftware", "@type": "@id" },
+        "assessesIndicator": { "@id": "rsqa:assessesIndicator", "@type": "@id" }
+    },
+    "@graph": [
+        {
+            "@id": "rsqa:SoftwareQualityAssessment",
+            "@type": "rdfs:Class",
+            "rdfs:label": "Software Quality Assessment",
+            "rdfs:comment": "A software quality assessment represents the result of measured indicators for a piece of software."
+        },
+        {
+            "@id": "rsqa:hasCheckResult",
+            "@type": "rdf:Property",
+            "rdfs:subPropertyOf": { "@id": "schema:hasPart" },
+            "rdfs:label": "has check result",
+            "rdfs:comment": "Property that links a software quality assessment to its individual check results.",
+            "rdfs:domain": { "@id": "rsqa:SoftwareQualityAssessment" },
+            "rdfs:range": { "@id": "rsqa:CheckResult" }
+        },
+        {
+            "@id": "rsqa:assessedSoftware",
+            "@type": "rdf:Property",
+            "rdfs:label": "assessed software",
+            "rdfs:comment": "Property that links a SoftwareQualityAssessment to the SoftwareApplication that was assessed.",
+            "rdfs:domain": { "@id": "rsqa:SoftwareQualityAssessment" },
+            "rdfs:range": { "@id": "rs:SoftwareApplication" }
+        },
+        {
+            "@id": "rsqa:CheckResult",
+            "@type": "rdfs:Class",
+            "rdfs:subClassOf": { "@id": "schema:Action" },
+            "rdfs:label": "Check Result",
+            "rdfs:comment": "Represents the outcome of a specific check performed as part of a software quality assessment. It is a subclass of schema:Action."
+        },
+        {
+            "@id": "rsqa:checkingSoftware",
+            "@type": "rdf:Property",
+            "rdfs:subPropertyOf": { "@id": "schema:agent" },
+            "rdfs:label": "checking software",
+            "rdfs:comment": "The software that was used to perform the check.",
+            "rdfs:domain": { "@id": "rsqa:CheckResult" },
+            "rdfs:range": { "@id": "rs:SoftwareApplication" }
+        },
+        {
+            "@id": "rsqa:assessesIndicator",
+            "@type": "rdf:Property",
+            "rdfs:subPropertyOf": { "@id": "schema:object" },
+            "rdfs:label": "assesses indicator",
+            "rdfs:comment": "The specific quality indicator that this check assesses.",
+            "rdfs:domain": { "@id": "rsqa:CheckResult" },
+            "rdfs:range": { "@id": "rsqi:SoftwareQualityIndicator" }
+        },
+        {
+            "@id": "rsqa:checkOutput",
+            "@type": "rdf:Property",
+            "rdfs:subPropertyOf": { "@id": "schema:result" },
+            "rdfs:label": "check output",
+            "rdfs:comment": "The raw output or result value of the check.",
+            "rdfs:domain": { "@id": "rsqa:CheckResult" },
+            "rdfs:range": { "@id": "xsd:string" }
+        },
+        {
+            "@id": "rsqa:checkEvidence",
+            "@type": "rdf:Property",
+            "rdfs:subPropertyOf": { "@id": "schema:result" },
+            "rdfs:label": "check evidence",
+            "rdfs:comment": "Additional information or evidence on how the check status was concluded.",
+            "rdfs:domain": { "@id": "rsqa:CheckResult" },
+            "rdfs:range": { "@id": "xsd:string" }
+        },
+        {
+            "@id": "https://w3id.org/everse/rsqa#",
+            "@type": "owl:Ontology",
+            "dcterms:creator": [
+                "Faruk Diblen",
+                "EVERSE Project"
+            ],
+            "dcterms:created": {
+                "@value": "2025-06-19T17:30:00Z",
+                "@type": "xsd:dateTime"
+            },
+            "owl:versionInfo": "0.0.2",
+            "rdfs:label": "Research Software Quality Assessment vocabulary",
+            "owl:versionIRI": { "@id": "https://w3id.org/everse/rsqa/0.0.2" },
+            "license": { "@id": "https://creativecommons.org/licenses/by/4.0/" }
+        }
+    ]
+}
