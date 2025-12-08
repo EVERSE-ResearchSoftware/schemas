@@ -104,9 +104,9 @@
                 "@value": "2025-06-19T17:30:00Z",
                 "@type": "xsd:dateTime"
             },
-            "owl:versionInfo": "0.0.1",
+            "owl:versionInfo": "0.0.2",
             "rdfs:label": "Research Software Quality Assessment vocabulary",
-            "owl:versionIRI": { "@id": "https://w3id.org/everse/rsqa/0.0.1" },
+            "owl:versionIRI": { "@id": "https://w3id.org/everse/rsqa/0.0.2" },
             "license": { "@id": "https://creativecommons.org/licenses/by/4.0/" }
         }
     ]
