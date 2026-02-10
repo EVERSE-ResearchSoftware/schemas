@@ -32,12 +32,12 @@ To ensure stable URLs, we maintain the following structure:
 
 Changes to the schemas are made in the `dev` directories. **NEVER** modify a previous version (e.g. `schemas/software/v0.1.0`) directory.
 
-Follow these steps to release a a new version (e.g., updating the `tools` schema from `v1.1.0` to `v1.2.0`).
+Follow these steps to release a a new version (e.g., updating the `software` schema from `v1.1.0` to `v1.2.0`).
 
 1. Copy the contents of `dev` into the `latest` folder and into `v1.2.0` folder:
 ```bash
-cp -r schemas/software/dev schemas/tools/latest
-cp -r schemas/software/dev schemas/tools/v1.2.0
+cp -r schemas/software/dev schemas/software/latest
+cp -r schemas/software/dev schemas/software/v1.2.0
 ```
 
 > Note: the `latest` directory ensures that anyone pointing to `https://w3id.org/everse/rs` immediately gets the new (latest) version of the schema.
