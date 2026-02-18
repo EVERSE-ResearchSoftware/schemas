@@ -100,7 +100,7 @@
                 "Faruk Diblen",
                 "EVERSE Project"
             ],
-            "dcterms:created": {
+            "schema:dateCreated": {
                 "@value": "2025-06-19T17:30:00Z",
                 "@type": "xsd:dateTime"
             },
