@@ -102,7 +102,7 @@
             ],
             "schema:dateCreated": {
                 "@value": "2025-06-19T17:30:00Z",
-                "@type": "xsd:dateTime"
+                "@type": "schema:DateTime"
             },
             "owl:versionInfo": "0.0.2",
             "rdfs:label": "Research Software Quality Assessment vocabulary",
