@@ -96,7 +96,7 @@
         {
             "@id": "https://w3id.org/everse/rsqa#",
             "@type": "owl:Ontology",
-            "dcterms:creator": [
+            "schema:creator": [
                 "Faruk Diblen",
                 "EVERSE Project"
             ],
