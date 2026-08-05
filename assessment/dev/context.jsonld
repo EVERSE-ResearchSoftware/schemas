@@ -100,7 +100,7 @@
             "@type": "rdf:Property",
             "rdfs:subPropertyOf": { "@id": "schema:result" },
             "rdfs:label": "check raw value",
-            "rdfs:comment": "The raw value or measurement obtained from the check, before any interpretation or thresholding.",
+            "rdfs:comment": "The raw value or measurement obtained from the check, before any interpretation or thresholding. This is different from the checkOutput property, which declares if the test is passed or not.",
             "rdfs:domain": { "@id": "rsqa:CheckResult" },
             "rdfs:range": { "@id": "xsd:string" }
         },
@@ -109,7 +109,7 @@
             "@type": "rdf:Property",
             "rdfs:subPropertyOf": { "@id": "schema:result" },
             "rdfs:label": "check threshold",
-            "rdfs:comment": "The threshold or criteria used to interpret the raw value of the check.",
+            "rdfs:comment": "The threshold or criteria used to interpret the raw value of the check. For example, documentation coverage passes under a tool if at least 50 percent of the functions are documented",
             "rdfs:domain": { "@id": "rsqa:CheckResult" },
             "rdfs:range": { "@id": "xsd:string" }
         },
