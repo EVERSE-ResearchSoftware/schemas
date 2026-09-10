@@ -1,8 +1,8 @@
 # RS Quality Assessment metadata schema
 
-- Version: 0.0.2
+- Version: 0.0.3
 - Identifier: https://w3id.org/everse/rsqa#
-- Version identifier: https://w3id.org/everse/rsqa/0.0.2
+- Version identifier: https://w3id.org/everse/rsqa/0.0.3
 - Author: Faruk Diblen, EVERSE Consortium
 
 A repository to describe the Research Software Quality Assessment results used in the EVERSE project. This schema allows for capturing the outcomes of software quality assessments, including individual check results and their associated evidence.
