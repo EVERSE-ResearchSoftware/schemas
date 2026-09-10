@@ -19,8 +19,6 @@
         "status": { "@id": "schema:actionStatus", "@type": "@id" },
         "process": { "@id": "schema:actionProcess", "@type": "@id" },
         "output": "rsqa:checkOutput",
-        "raw_value": "rsqa:checkRawValue",
-        "threshold": "rsqa:checkThreshold",
         "evidence": "rsqa:checkEvidence",
         "SoftwareQualityAssessment": "rsqa:SoftwareQualityAssessment",
         "CheckResult": "rsqa:CheckResult",
@@ -33,7 +31,7 @@
             "@id": "rsqa:SoftwareQualityAssessment",
             "@type": "rdfs:Class",
             "rdfs:label": "Software Quality Assessment",
-            "rdfs:comment": "A software quality assessment represents the result of measured indicators for a piece of software."
+            "rdfs:comment": "A software quality assessment represents the result of measuring a set of indicators for a piece of software. The result is a set of rsqa:CheckResults"
         },
         {
             "@id": "rsqa:hasCheckResult",
@@ -93,36 +91,18 @@
             "rdfs:label": "check evidence",
             "rdfs:comment": "Additional information or evidence on how the check status was concluded.",
             "rdfs:domain": { "@id": "rsqa:CheckResult" },
-            "rdfs:range": { "@id": "xsd:string" }
-        },
-                {
-            "@id": "rsqa:checkRawValue",
-            "@type": "rdf:Property",
-            "rdfs:subPropertyOf": { "@id": "schema:result" },
-            "rdfs:label": "check raw value",
-            "rdfs:comment": "The raw value or measurement obtained from the check, before any interpretation or thresholding. This is different from the checkOutput property, which declares if the test is passed or not.",
-            "rdfs:domain": { "@id": "rsqa:CheckResult" },
-            "rdfs:range": { "@id": "xsd:string" }
-        },
-        {
-            "@id": "rsqa:checkThreshold",
-            "@type": "rdf:Property",
-            "rdfs:subPropertyOf": { "@id": "schema:result" },
-            "rdfs:label": "check threshold",
-            "rdfs:comment": "The threshold or criteria used to interpret the raw value of the check. For example, documentation coverage passes under a tool if at least 50 percent of the functions are documented",
-            "rdfs:domain": { "@id": "rsqa:CheckResult" },
-            "rdfs:range": { "@id": "xsd:string" }
+            "rdfs:range": { "@id": "schema:Text" }
         },
         {
             "@id": "https://w3id.org/everse/rsqa#",
             "@type": "owl:Ontology",
-            "dcterms:creator": [
+            "schema:creator": [
                 "Faruk Diblen",
                 "EVERSE Project"
             ],
-            "dcterms:created": {
+            "schema:dateCreated": {
                 "@value": "2025-06-19T17:30:00Z",
-                "@type": "xsd:dateTime"
+                "@type": "schema:DateTime"
             },
             "owl:versionInfo": "0.0.2",
             "rdfs:label": "Research Software Quality Assessment vocabulary",
