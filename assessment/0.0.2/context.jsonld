@@ -91,7 +91,7 @@
             "rdfs:label": "check evidence",
             "rdfs:comment": "Additional information or evidence on how the check status was concluded.",
             "rdfs:domain": { "@id": "rsqa:CheckResult" },
-            "rdfs:range": { "@id": "xsd:string" }
+            "rdfs:range": { "@id": "schema:Text" }
         },
         {
             "@id": "https://w3id.org/everse/rsqa#",
