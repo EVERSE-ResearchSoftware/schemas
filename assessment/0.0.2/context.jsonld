@@ -31,7 +31,7 @@
             "@id": "rsqa:SoftwareQualityAssessment",
             "@type": "rdfs:Class",
             "rdfs:label": "Software Quality Assessment",
-            "rdfs:comment": "A software quality assessment represents the result of measured indicators for a piece of software."
+            "rdfs:comment": "A software quality assessment represents the result of measuring a set of indicators for a piece of software. The result is a set of rsqa:CheckResults"
         },
         {
             "@id": "rsqa:hasCheckResult",
