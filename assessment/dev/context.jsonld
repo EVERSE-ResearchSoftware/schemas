@@ -82,7 +82,7 @@
             "@type": "rdf:Property",
             "rdfs:subPropertyOf": { "@id": "schema:result" },
             "rdfs:label": "check output",
-            "rdfs:comment": "The raw output or result value of the check.",
+            "rdfs:comment": "The normalised verdict of the check. One of 'pass' (the check ran and the software meets the indicator), 'fail' (the check ran and the software does not meet the indicator) or 'not_applicable' (the indicator does not apply to this software, e.g. a Python linter on a project with no Python code). Present only when the check completed (schema:CompletedActionStatus). The raw measurement goes in rsqa:checkRawValue.",
             "rdfs:domain": { "@id": "rsqa:CheckResult" },
             "rdfs:range": { "@id": "schema:Text" }
         },

@@ -1,0 +1,152 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://w3id.org/everse/rsqa/dev/assessment_schema_validator.json",
+    "title": "EVERSE Research Software Quality Assessment (RSQA) schema",
+    "description": "Validates the JSON serialisation of an rsqa:SoftwareQualityAssessment. It checks structure and value formats only; it does not expand the JSON-LD.",
+    "type": "object",
+    "required": [
+        "@context",
+        "@type",
+        "name",
+        "dateCreated",
+        "assessedSoftware",
+        "checks"
+    ],
+    "properties": {
+        "@context": {
+            "title": "JSON-LD context, usually https://w3id.org/everse/rsqa/<version>",
+            "anyOf": [
+                { "type": "string", "format": "uri" },
+                { "type": "object" },
+                { "type": "array" }
+            ]
+        },
+        "@type": {
+            "enum": ["SoftwareQualityAssessment", "rsqa:SoftwareQualityAssessment"]
+        },
+        "name": {
+            "type": "string",
+            "minLength": 1
+        },
+        "description": {
+            "type": "string"
+        },
+        "creator": {
+            "type": "object",
+            "required": ["@type", "name"],
+            "properties": {
+                "@type": {
+                    "enum": ["schema:Person", "schema:Organization", "Person", "Organization"]
+                },
+                "name": { "type": "string", "minLength": 1 },
+                "email": { "type": "string" }
+            }
+        },
+        "dateCreated": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.[0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$"
+        },
+        "version": {
+            "type": "string"
+        },
+        "license": {
+            "$ref": "#/$defs/uriReference"
+        },
+        "assessedSoftware": {
+            "$ref": "#/$defs/softwareApplication"
+        },
+        "checks": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "$ref": "#/$defs/checkResult" }
+        }
+    },
+    "$defs": {
+        "uriReference": {
+            "type": "object",
+            "required": ["@id"],
+            "properties": {
+                "@id": { "type": "string", "format": "uri", "pattern": "^https?://" }
+            }
+        },
+        "softwareApplication": {
+            "type": "object",
+            "required": ["@type", "name"],
+            "properties": {
+                "@type": {
+                    "enum": ["schema:SoftwareApplication", "SoftwareApplication", "rs:SoftwareApplication"]
+                },
+                "@id": { "type": "string", "format": "uri" },
+                "name": { "type": "string", "minLength": 1 },
+                "softwareVersion": { "type": "string" },
+                "url": { "type": "string", "format": "uri" }
+            }
+        },
+        "checkResult": {
+            "type": "object",
+            "required": [
+                "@type",
+                "assessesIndicator",
+                "checkingSoftware",
+                "status"
+            ],
+            "properties": {
+                "@type": {
+                    "enum": ["CheckResult", "rsqa:CheckResult"]
+                },
+                "assessesIndicator": {
+                    "$ref": "#/$defs/uriReference"
+                },
+                "checkingSoftware": {
+                    "allOf": [
+                        { "$ref": "#/$defs/softwareApplication" },
+                        {
+                            "properties": {
+                                "@id": {
+                                    "type": "string",
+                                    "pattern": "^https://w3id\\.org/everse/tools/[^/]+$"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "process": { "type": "string" },
+                "status": {
+                    "type": "object",
+                    "required": ["@id"],
+                    "properties": {
+                        "@id": {
+                            "enum": [
+                                "schema:CompletedActionStatus",
+                                "schema:FailedActionStatus",
+                                "schema:ActiveActionStatus",
+                                "schema:PotentialActionStatus"
+                            ]
+                        }
+                    }
+                },
+                "output": {
+                    "title": "Normalised verdict of the check",
+                    "enum": ["pass", "fail", "not_applicable"]
+                },
+                "evidence": { "type": "string" },
+                "raw_value": { "type": "string" },
+                "threshold": { "type": "string" }
+            },
+            "if": {
+                "properties": {
+                    "status": {
+                        "properties": { "@id": { "const": "schema:CompletedActionStatus" } }
+                    }
+                }
+            },
+            "then": {
+                "required": ["output"]
+            },
+            "else": {
+                "not": { "required": ["output"] }
+            }
+        }
+    }
+}
