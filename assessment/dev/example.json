@@ -31,7 +31,7 @@
             },
             "process": "Searches for a file named 'LICENSE' or 'LICENSE.md' in the repository root.",
             "status": { "@id": "schema:CompletedActionStatus" },
-            "output": "true",
+            "output": "pass",
             "evidence": "Found license file: 'LICENSE'."
         },
         {
@@ -46,7 +46,7 @@
 
             "process": "Searches for a 'CITATION.cff' file in the repository root and validates its syntax.",
             "status": { "@id": "schema:CompletedActionStatus" },
-            "output": "true",
+            "output": "pass",
             "evidence": "Found valid CITATION.cff file in repository root."
         },
         {
@@ -58,12 +58,26 @@
                 "softwareVersion": "0.5.2"
             },
 
-            "process": "Calculates the percentage of code duplication in a project. If biigger than 20%, the check will fail .",
+            "process": "Calculates the percentage of code duplication in a project. If bigger than 20%, the check fails.",
             "raw_value": "Percentage of duplication: 25.44642857142857%; 57 duplicated fragments.",
             "threshold": "20",
             "status": { "@id": "schema:CompletedActionStatus" },
-            "output": "false",
+            "output": "fail",
             "evidence": "Percentage of duplication is 25%, above the required threshold"
+        },
+        {
+            "@type": "CheckResult",
+            "assessesIndicator": { "@id": "https://w3id.org/everse/i/indicators/has_no_linting_issues" },
+            "checkingSoftware": {
+                "@type": "schema:SoftwareApplication",
+                "name": "ruff",
+                "@id": "https://w3id.org/everse/tools/ruff",
+                "softwareVersion": "0.6.9"
+            },
+            "process": "Runs the ruff linter on the Python files of the repository.",
+            "status": { "@id": "schema:CompletedActionStatus" },
+            "output": "not_applicable",
+            "evidence": "No Python files found; the repository is written in TypeScript."
         }
     ]
 }
