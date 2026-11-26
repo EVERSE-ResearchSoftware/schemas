@@ -1,6 +1,5 @@
 {
   "@context": {
-    "@vocab": "http://schema.org/",
     "schema": "http://schema.org/",
     "rsqd": "https://w3id.org/everse/rsqd#",
     "rsqi": "https://w3id.org/everse/rsqi#",
@@ -19,7 +18,11 @@
     "SoftwareApplication": { "@id": "schema:SoftwareApplication" },
     "applicationCategory": { "@id": "schema:applicationCategory", "@type": "@id" },
     "author": { "@id": "schema:author", "@type": "@id" },
+    "codeRepository": "schema:codeRepository",
     "description": "schema:description",
+    "documentation": "schema:documentation",
+    "featureList": "schema:featureList",
+    "keywords": "schema:keywords",
     "name": "schema:name",
     "url": { "@id": "schema:url", "@type": "@id" },
     "identifier": { "@id": "schema:identifier", "@type": "@id" },
