@@ -6,6 +6,9 @@
     "description": "Command line tool to analyze a GitHub or GitLab repository's compliance with the fair-software.eu recommendations",
     "url": "https://github.com/fair-software/howfairis",
     "identifier": "https://example.org/howfairis",
+    "codeRepository": "https://github.com/fair-software/howfairis/",
+    "documentation": "https://github.com/fair-software/howfairis/blob/main/README.rst",
+    "keywords": ["fair", "fair4rs"],
     "isAccessibleForFree": true,
     "hasQualityDimension": {
         "@id": "dim:fairness",

@@ -37,6 +37,9 @@
         <loc>https://everse.software/schemas/software/0.0.2/</loc>
       </url>
       <url>
+        <loc>https://everse.software/schemas/software/0.0.3/</loc>
+      </url>
+      <url>
         <loc>https://everse.software/schemas/software/dev/</loc>
       </url>
 </urlset>
