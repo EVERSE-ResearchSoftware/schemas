@@ -18,6 +18,6 @@ curl -sH "accept:application/ld+json" -L https://w3id.org/everse/rs
 The vocabulary has versioning enabled. To get a particular version add the version number in the URL:
 
 ```
-curl -sH "accept:application/ld+json" -L https://w3id.org/everse/rs/0.0.1
+curl -sH "accept:application/ld+json" -L https://w3id.org/everse/rs/0.0.3
 ```
 

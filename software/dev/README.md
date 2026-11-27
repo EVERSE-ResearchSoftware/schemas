@@ -29,6 +29,10 @@ The following attributes describe a RS tool (please note that not all are mandat
 | Applies to Programming language | rs:appliesToProgrammingLanguage | schema:Text (string)| N/A |
 | Author | schema:author | schema:Person or schema:Organization (URL) | N/A |
 | Description | schema:description | schema:Text (string)| N/A |
+| Code repository | schema:codeRepository | schema:URL (string)| N/A |
+| Documentation | schema:documentation | schema:URL (string)| N/A |
+| Featrue list | schema:featureList | schema:Text (string)| N/A |
+| Keywords | schema:keywords | schema:Text (string)| N/A |
 | How to use the tool? | rs:howToUse | schema:Text (string) | online-service, CI/CD, command-line, library |
 | Name of the tool | schema:name | schema:Text (string)| N/A |
 | Identifier | schema:identifier | schema:URL (string)| N/A |
@@ -102,6 +106,6 @@ curl -sH "accept:application/ld+json" -L https://w3id.org/everse/rs
 The vocabulary has versioning enabled. To get a particular version add the version number in the URL:
 
 ```
-curl -sH "accept:application/ld+json" -L https://w3id.org/everse/rs/0.0.1
+curl -sH "accept:application/ld+json" -L https://w3id.org/everse/rs/0.0.3
 ```
 
