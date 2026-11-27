@@ -1,8 +1,8 @@
 # EVERSE Research Software metadata schema
 - Version: dev
 - Identifier: https://w3id.org/everse/rs#
-- Version identifier: https://w3id.org/everse/rs/dev
-- Date: 
+- Version identifier: https://w3id.org/everse/rs/0.0.3
+- Date: November 27th, 2026
 
 A repository to describe the Research Software metadata, for the tools described within the EVERSE project.
 This metadata schema relies heavily on [CodeMeta](https://codemeta.github.io/terms/) and [Schema.org](http://schema.org/)), extending them when needed to 
